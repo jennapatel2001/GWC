@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<style>
+.center {
+    margin: auto;
+    width: 35%;
+    border: 0px solid white;
+    padding: 0px;
+}
+p.small {
+    font-variant: small-caps;
+}
+
+</style>
+<script>
+
+function tr() {
+	var old = document.getElementById("trans_this").value;
+	var inUD="";
+	
+	for(var z = 0; z<old.length; z++){
+		var mychar= old.charAt(z);
+		if (mychar=="a"|| mychar=="e"||mychar=="i"||mychar=="o"||mychar=="u"){
+			inUD = inUD + "ub";
+		}
+		inUD = inUD + old.charAt(z);
+	}
+
+		document.getElementById("result").innerHTML= inUD;
+		
+}
+</script>
+
+<body>
+<div class="center">
+	<p style="font-size: 40px; color: #AFEEEE; text-decoration: overline; font-style: italic;"><b> Ubbi Dubbi Translator </b></p>
+
+<p style="font-size:25px; color: powderblue; class="small"> Enter English <input type="text" id="trans_this"></p><br>
+<button type="button" onclick="tr()">Translate</button>
+<p id="result"></p> 
+<style>
+body {
+background-image: url("background.jpg");
+}
+</style>
+
+</body>
+</html>
+
